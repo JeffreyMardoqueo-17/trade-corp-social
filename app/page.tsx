@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Playfair_Display } from 'next/font/google'
 import {
   Facebook,
   Globe,
@@ -7,6 +8,11 @@ import {
   MessageCircle,
   Music,
 } from 'lucide-react'
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['500', '600'],
+})
 
 const socialLinks = [
   {
@@ -27,7 +33,7 @@ const socialLinks = [
     id: 'tiktok',
     name: 'TikTok',
     icon: Music,
-    url: 'https://www.tiktok.com/@grupotradecorpsv',
+    url: 'https://www.tiktok.com/@riskadvisors?_r=1&_t=ZS-95ytWlSRXOq',
     color: '#25F4EE',
   },
   {
@@ -41,21 +47,15 @@ const socialLinks = [
     id: 'grupo-trade-corp',
     name: 'Grupo Trade Corp',
     icon: Globe,
-    url: 'https://grupotcorp.com/',
+    url: 'https://grupo-trader-corp.vercel.app',
     color: '#D6A556',
   },
-  {
-    id: 'web-2',
-    name: 'Web 2',
-    icon: Globe,
-    url: 'https://grupotcorp.com/',
-    color: '#D6A556',
-  },
+ 
   {
     id: 'whatsapp',
     name: 'WhatsApp',
     icon: MessageCircle,
-    url: 'https://wa.me/50369842090',
+    url: 'https://wa.me/50360387347',
     color: '#25D366',
   },
 ]
@@ -64,7 +64,11 @@ export default function SocialPage() {
   return (
     <main className="min-h-screen bg-background text-foreground flex items-center justify-center px-4 py-12">
       <section className="w-full max-w-2xl text-center space-y-8">
-        <h1 className="text-5xl font-bold tracking-tight">Síguenos</h1>
+        <h1
+          className={`${playfair.className} text-3xl font-medium tracking-[0.2em] text-gray-200 md:text-6xl`}
+        >
+          Síguenos
+        </h1>
 
         <div className="mx-auto flex h-36 w-36 items-center justify-center overflow-hidden rounded-full border-2 border-primary/70 bg-card shadow-[0_0_35px_rgba(214,165,86,0.35)] md:h-40 md:w-40">
           <Image
