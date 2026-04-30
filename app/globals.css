@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --brand-base: #000418;
+  --brand-blue: #041935;
+  --brand-gold: #D6A556;
+  --white: #ffffff;
+  --grey-1: #BBABC0;
+  
+  --background: var(--brand-base);
+  --foreground: var(--white);
+  --card: var(--brand-blue);
+  --card-foreground: var(--white);
+  --popover: var(--brand-blue);
+  --popover-foreground: var(--white);
+  --primary: var(--brand-gold);
+  --primary-foreground: var(--brand-base);
+  --secondary: var(--grey-1);
+  --secondary-foreground: var(--brand-base);
+  --muted: var(--grey-1);
+  --muted-foreground: var(--white);
+  --accent: var(--brand-gold);
+  --accent-foreground: var(--brand-base);
+  --destructive: #ff4444;
+  --destructive-foreground: var(--white);
+  --border: var(--grey-1);
+  --input: var(--brand-blue);
+  --ring: var(--brand-gold);
+  --chart-1: var(--brand-gold);
+  --chart-2: var(--brand-blue);
+  --chart-3: var(--grey-1);
+  --chart-4: var(--brand-blue);
+  --chart-5: var(--brand-gold);
+  --radius: 0.625rem;
+  --sidebar: var(--brand-blue);
+  --sidebar-foreground: var(--white);
+  --sidebar-primary: var(--brand-gold);
+  --sidebar-primary-foreground: var(--brand-base);
+  --sidebar-accent: var(--brand-gold);
+  --sidebar-accent-foreground: var(--brand-base);
+  --sidebar-border: var(--grey-1);
+  --sidebar-ring: var(--brand-gold);
+}
+
+.dark {
+  --background: var(--brand-base);
+  --foreground: var(--white);
+  --card: var(--brand-blue);
+  --card-foreground: var(--white);
+  --popover: var(--brand-blue);
+  --popover-foreground: var(--white);
+  --primary: var(--brand-gold);
+  --primary-foreground: var(--brand-base);
+  --secondary: var(--grey-1);
+  --secondary-foreground: var(--brand-base);
+  --muted: var(--grey-1);
+  --muted-foreground: var(--white);
+  --accent: var(--brand-gold);
+  --accent-foreground: var(--brand-base);
+  --destructive: #ff4444;
+  --destructive-foreground: var(--white);
+  --border: var(--grey-1);
+  --input: var(--brand-blue);
+  --ring: var(--brand-gold);
+  --chart-1: var(--brand-gold);
+  --chart-2: var(--brand-blue);
+  --chart-3: var(--grey-1);
+  --chart-4: var(--brand-blue);
+  --chart-5: var(--brand-gold);
+  --sidebar: var(--brand-blue);
+  --sidebar-foreground: var(--white);
+  --sidebar-primary: var(--brand-gold);
+  --sidebar-primary-foreground: var(--brand-base);
+  --sidebar-accent: var(--brand-gold);
+  --sidebar-accent-foreground: var(--brand-base);
+  --sidebar-border: var(--grey-1);
+  --sidebar-ring: var(--brand-gold);
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
